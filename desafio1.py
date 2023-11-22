@@ -1,5 +1,10 @@
-nome = input ("Digite o nome do seu herói: ")
-experienciaTotal = int(input ("Digite a experiência adquirida do seu herói até o momento: "))
+nome = input ("Digite o nome do seu herói: ") # inserindo nome do heroi
+while True: # comando para que o valor inserido em experiencia seja um intenger, se for outro comando vai solicitar o dado de novo
+    try:
+           experienciaTotal = int(input ("Digite a experiência adquirida do seu herói até o momento: "))
+           break
+    except ValueError:
+          print ("O valor inserido no campo experiência dever ser um valor númerico.") 
 
 if experienciaTotal <= 1000:
     nivel = "Ferro"
